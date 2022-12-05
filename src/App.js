@@ -1,10 +1,15 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import './App.scss';
 import Board from './components/Board';
 
-const App = (context) =>
-	<div className="App" role="application">
-		<Board {...context} />
+const App = (context) => {
+	const { actions } = context;
+
+	useEffect(() => actions.getSlots(context), []);
+
+	return <div className="App" role="application">
+		<Board { ...context }/>
 	</div>;
+};
 
 export default App;
