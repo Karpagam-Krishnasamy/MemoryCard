@@ -1,8 +1,7 @@
 const seed = {
 	slots: [],
-	moves: 0,
-	openedItems: [],
-	isGameCompleted: false,
+	movesCount: 0,
+	hasGameCompleted: false,
 };
 
 export default seed;

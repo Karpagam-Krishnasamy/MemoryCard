@@ -8,9 +8,14 @@ const GameManager = {
 		card: {},
 	})),
 
-	hasGameCompleted: () => {},
+	openCard: () => {},
+
+	updateStatus: () => {},
 
 	updateMoves: () => {},
+
+	hasGameCompleted: () => {},
+
 };
 
 export default GameManager;

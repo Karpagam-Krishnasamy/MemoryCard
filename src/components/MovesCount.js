@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Moves = ({ state: { moves }}) => <div>
-	Number Of Moves: {moves}
+const MovesCount = ({ state: { moves: movesCount }}) => <div>
+	Number Of Moves: {movesCount}
 </div>;
 
-export default Moves;
+export default MovesCount;

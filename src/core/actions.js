@@ -1,4 +1,3 @@
-import CardManager from '../services/CardManager';
 import GameManager from '../services/GameManager';
 
 const getSlots = (context) => ({
@@ -6,18 +5,16 @@ const getSlots = (context) => ({
 });
 
 const openCard = (context) => ({
-	slots: CardManager.openCard(context),
-	openedItems: CardManager.getOpenedCards(context),
+	slots: GameManager.openCard(context),
 });
 
 const updateStatus = (context) => ({
-	slots: CardManager.updateStatus(context),
-	openedItems: CardManager.deleteOpenedItems(context),
-	moves: GameManager.updateMoves(context),
+	slots: GameManager.updateStatus(context),
+	movesCount: GameManager.updateMoves(context),
 });
 
 const checkGameStatus = (context) => ({
-	isGameCompleted: GameManager.hasGameCompleted(context),
+	hasGameCompleted: GameManager.hasGameCompleted(context),
 });
 
 const actions = {
