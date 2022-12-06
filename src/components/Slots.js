@@ -5,7 +5,7 @@ import Slot from './Slot';
 const Slots = (context) => {
 	const { state: { slots }} = context;
 
-	return <div>
+	return <div className="slots-container">
 		{map(slots, (slot) =>
 			<Slot { ...{ ...context, data: slot } }/>)}
 	</div>;

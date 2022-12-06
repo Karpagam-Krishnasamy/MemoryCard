@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
 
-const Slot = ({ data: { style }}) =>
-	<div style={ style } className="slot">
+const Slot = () =>
+	<div className="slot">H
 		<Card/>
 	</div>;
 
