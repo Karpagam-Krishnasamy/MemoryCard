@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-const Slot = () =>
+const Slot = (context) =>
 	<div className="slot">H
-		<Card/>
+		<Card { ...context }/>
 	</div>;
 
 export default Slot;

@@ -9,6 +9,8 @@ const GameManager = {
 	})),
 
 	hasGameCompleted: () => {},
+
+	updateMoves: () => {},
 };
 
 export default GameManager;

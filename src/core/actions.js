@@ -12,7 +12,8 @@ const openCard = (context) => ({
 
 const updateStatus = (context) => ({
 	slots: CardManager.updateStatus(context),
-	openedItems: [],
+	openedItems: CardManager.deleteOpenedItems(context),
+	moves: GameManager.updateMoves(context),
 });
 
 const checkGameStatus = (context) => ({

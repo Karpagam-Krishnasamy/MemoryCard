@@ -7,6 +7,8 @@ const CardManager = {
 
 	updateStatus: () => {},
 
+	deleteOpenedItems: () => [],
+
 };
 
 export default CardManager;
