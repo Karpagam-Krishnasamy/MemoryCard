@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 const Slot = (context) =>
-	<div className="slot">H
+	<div className="slot">
 		<Card { ...context }/>
 	</div>;
 

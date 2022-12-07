@@ -1,27 +1,22 @@
 import GameManager from '../services/GameManager';
 
-const getSlots = (context) => ({
+const generateSlots = (context) => ({
 	slots: GameManager.generateSlots(context),
 });
 
 const openCard = (context) => ({
 	slots: GameManager.openCard(context),
+	movesCount: GameManager.updateMovesCount(context),
 });
 
-const updateStatus = (context) => ({
-	slots: GameManager.updateStatus(context),
-	movesCount: GameManager.updateMoves(context),
-});
-
-const checkGameStatus = (context) => ({
-	hasGameCompleted: GameManager.hasGameCompleted(context),
+const checkForMatch = (context) => ({
+	slots: GameManager.checkForMatch(context),
 });
 
 const actions = {
-	getSlots,
+	generateSlots,
 	openCard,
-	updateStatus,
-	checkGameStatus,
+	checkForMatch,
 };
 
 export default actions;

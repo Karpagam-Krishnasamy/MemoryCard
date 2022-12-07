@@ -5,16 +5,17 @@ const shapeCount = 20;
 const GameManager = {
 	generateSlots: () => map(range(1, shapeCount + 1), (number) => ({
 		id: number,
-		card: {},
+		card: {
+		},
 	})),
 
-	openCard: () => {},
+	openCard: () => {
+	},
 
-	updateStatus: () => {},
+	checkForMatch: () => {
+	},
 
-	updateMoves: () => {},
-
-	hasGameCompleted: () => {},
+	updateMovesCount: () => {},
 
 };
 
