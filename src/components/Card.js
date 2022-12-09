@@ -1,5 +1,14 @@
 import React from 'react';
 
-const Card = () => <div/>;
+const cardClickHandler = ({ actions }) => {
+	actions.openCard();
+	actions.checkForMatch();
+};
+
+const Card = (context) =>
+	<div
+		className="card"
+		onClick={ () => cardClickHandler(context) }
+	/>;
 
 export default Card;

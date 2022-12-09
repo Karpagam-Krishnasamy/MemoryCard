@@ -5,7 +5,7 @@ import Board from './components/Board';
 const App = (context) => {
 	const { actions } = context;
 
-	useEffect(() => actions.getSlots(context), []);
+	useEffect(() => actions.generateSlots(context), []);
 
 	return <div className="App" role="application">
 		<Board { ...context }/>

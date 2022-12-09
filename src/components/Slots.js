@@ -6,8 +6,8 @@ const Slots = (context) => {
 	const { state: { slots }} = context;
 
 	return <div className="slots-container">
-		{map(slots, (slot) =>
-			<Slot { ...{ ...context, data: slot } }/>)}
+		{map(slots, (slot, i) =>
+			<Slot key={ i } { ...{ ...context, data: slot } }/>)}
 	</div>;
 };
 
