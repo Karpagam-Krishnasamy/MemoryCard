@@ -68,6 +68,9 @@ const GameManager = {
 		return openedCardsCount === two ? movesCount + 1 : movesCount;
 	},
 
+	isGameCompleted: ({ state: { slots }}) =>
+		slots.every(({ card: { status }}) => status !== 'close'),
+
 };
 
 export default GameManager;

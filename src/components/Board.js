@@ -1,10 +1,11 @@
 import React from 'react';
+import GameManager from '../services/GameManager';
 import GameOverScreen from './GameOverScreen';
 import MovesCount from './MovesCount';
 import Slots from './Slots';
 
 const Board = (context) => {
-	const { state: { isGameCompleted }} = context;
+	const isGameCompleted = GameManager.isGameCompleted(context);
 
 	return <div>
 		{isGameCompleted
