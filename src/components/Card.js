@@ -1,9 +1,9 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react';
 
-const handleCardClick = (context) => {
-	context.actions.openCard(context);
-	setTimeout(() => context.actions.checkForMatch(context), 3000);
+const handleCardClick = ({ actions, config: { timeDelay }, ...context }) => {
+	actions.openCard(context);
+	setTimeout(() => actions.checkForMatch(context), timeDelay);
 };
 
 const Card = (context) => {
@@ -14,7 +14,8 @@ const Card = (context) => {
 			className="card"
 			onClick={ () => handleCardClick(context) }
 		>{status === 'open' && value}
-		</div>);
+		</div>
+	);
 };
 
 export default Card;
