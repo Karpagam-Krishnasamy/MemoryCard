@@ -6,10 +6,10 @@ const generateSlots = (context) => ({
 
 const openCard = (context) => ({
 	slots: GameManager.openCard(context),
-	movesCount: GameManager.updateMovesCount(context),
 });
 
 const checkForMatch = (context) => ({
+	movesCount: GameManager.updateMovesCount(context),
 	slots: GameManager.checkForMatch(context),
 });
 

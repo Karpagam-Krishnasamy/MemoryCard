@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MovesCount = ({ state: { moves: movesCount }}) => <div>
+const MovesCount = ({ state: { movesCount }}) => <div>
 	Number Of Moves: {movesCount}
 </div>;
 
