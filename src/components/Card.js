@@ -1,4 +1,3 @@
-/* eslint-disable no-magic-numbers */
 import React from 'react';
 
 const handleCardClick = ({ actions, config: { timeDelay }, ...context }) => {

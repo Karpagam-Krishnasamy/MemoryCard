@@ -1,5 +1,8 @@
+import GameManager from '../services/GameManager';
+import context from './context';
+
 const seed = {
-	slots: [],
+	slots: GameManager.generateSlots(context),
 	movesCount: 0,
 };
 
